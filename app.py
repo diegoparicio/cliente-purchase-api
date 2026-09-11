@@ -12,7 +12,7 @@ model = joblib.load("model/cliente_purchase_model.pkl")
 
 # Crear API
 app = FastAPI(
-    title="Customer Purchase Prediction API",
+    title="Predicción de Compras API",
     description="API para predecir la probabilidad de compra de clientes",
     version="1.0.0"
 )
@@ -36,7 +36,7 @@ class CustomerFeatures(BaseModel):
 @app.get("/")
 def root():
     return {
-        "message": "Customer Purchase Prediction API",
+        "message": "Predicción de Compras API",
         "status": "online"
     }
 
